@@ -1,0 +1,7 @@
+Query:
+    type: object
+    config:
+        fields:
+            text:
+                type: "Text"
+                resolve: '@=resolver("App\\Resolver\\Text::getText", [])'

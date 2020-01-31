@@ -1,0 +1,7 @@
+Sentence:
+    type: object
+    config:
+        description: "A sentence"
+        fields:
+            url:
+                type: "String!"

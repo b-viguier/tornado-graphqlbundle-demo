@@ -1,0 +1,14 @@
+Text:
+    type: object
+    config:
+        description: "A text"
+        fields:
+            url:
+                type: "String!"
+            nbSentences:
+                type: "Int!"
+                resolve: '@=resolver("App\\Resolver\\Text::getNbSentences", [value["url"]])'
+            sentences:
+                type: "[Sentence!]!"
+                resolve: '@=resolver("App\\Resolver\\Sentence::findByText", [value["url"]])'
+
